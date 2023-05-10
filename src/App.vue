@@ -1,5 +1,5 @@
 <template>
-  <!-- <router-view/> -->
+  <router-view></router-view>
   <Navbar_menu/>
   <br>
   <Header_info/>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import '../pages/main/style.css'
+  import '@/style/style.css'
   import Navbar_menu from './components/Navbar_menu.vue'
   import Footer_contacts from './components/Footer_contacts.vue'
   import Friends_house from './components/Friends_house.vue'

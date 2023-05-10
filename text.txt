@@ -1,0 +1,106 @@
+<template>
+    <div class="pets carousel_cards card one" >
+        <!-- v-for="(animal, index) in animals" :key="index"
+            
+            <img class="pets pet_pic one" src="src/assets/dogs/1.png" /> -->
+        <!-- <div class="pets pet_pic one"
+            v-bind:style="{ backgroundImage: 'url(' + require('@/assets/dogs/1.png') + ')'}"></div> -->
+        <!-- <img class="pets pet_pic one" src="{{ animals[index].img }}" /> -->
+
+         <!-- v-bind:style="{ 'background-image': 'url(' + require( animal.img ) + ')'}" -->
+        <!-- <div class="pets pet_name one">{{ animals[index].name }}</div> -->
+        <div class="pets button_contour">Learn more</div>
+    </div>
+</template>
+
+<script>
+// import useData from "../data/pets.json"
+
+export default {
+    data() {
+        // let resData = [];
+        // for (let {
+        //     name,
+        //     img,
+        //     type,
+        //     breed,
+        //     description,
+        //     age,
+        //     inoculations,
+        //     diseases,
+        //     parasites,
+        // } of useData) {
+        //     let image = require(img);
+        //     resData.push({
+        //         name: name,
+        //         img: image,
+        //         type: type,
+        //         breed: breed,
+        //         description: description,
+        //         age: age,
+        //         inoculations: inoculations,
+        //         diseases: diseases,
+        //         parasites: parasites,
+        //     });
+        // }
+        // console.log(typeof (useData));
+        // return {
+        //     animals: useData
+        // }
+    },
+    method: {
+      
+    }
+}
+</script>
+
+<style></style>
+
+
+ .burger_menu {
+    width: 320px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 250;
+    transition: all 0.4s ease-in-out;
+    transform: translate(100%, 0px);
+  }
+  /* .burger_menu.active {
+    transform: translate(0%, 0px);
+  }
+  .burger_nav_menu {
+    list-style: none;
+  }
+  .burger_nav_menu_item {
+    font-family: "Arial";
+    font-size: 32px;
+    line-height: 160%;
+    color: #cdcdcd;
+  }
+  .burger_nav_menu_item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .burger_nav_menu_item:first-child {
+    margin-top: 248px;
+  }
+  .burger_nav_menu_item:hover {
+    cursor: pointer;
+  } 
+  .burger_nav_menu_link {
+    text-decoration: none;
+    color: #cdcdcd;
+  }
+  .burger_nav_menu_link.active {
+    color: #fafafa;
+  }
+  .burger_nav_menu_link.border {
+    border-bottom: 2px solid var(--logo-color);
+  }
+  .nav_menu {
+    display: none;
+  }
