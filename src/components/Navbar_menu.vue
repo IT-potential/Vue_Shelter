@@ -58,17 +58,13 @@ export default {
       { name: 'About the shelter', link: '#header' },
       { name: 'Our pets', link: '#pets' },
       { name: 'Help the shelter', link: '#help' },
-      { name: 'Contacts', link: '#footer' }
+      { name: 'Contacts', link: '#footer' },
     ]
     return {
       links,
       show: false,
-      action: ''
+      action: '',
     }
-  },
-  methods: {
-  
+  }
 }
-</script>
-
-<style></style>
+  </script>

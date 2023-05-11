@@ -311,7 +311,7 @@
 }
 .pets.pet_pic.one {
   border-radius: 9px 9px 0px 0px;
-  background-image: url("../../refs/pics/cats/pets-katrine.png");
+  /* background-image: url("../../refs/pics/cats/pets-katrine.png"); */
   background-repeat: no-repeat;
 }
 .pets.pet_pic.two {

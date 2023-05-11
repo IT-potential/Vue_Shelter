@@ -3,15 +3,18 @@
         <!-- v-for="(animal, index) in animals" :key="index"
             
             <img class="pets pet_pic one" src="src/assets/dogs/1.png" /> -->
-        <!-- <div class="pets pet_pic one"
+            <!-- <div class="pets pet_pic one"
             v-bind:style="{ backgroundImage: 'url(' + require('@/assets/dogs/1.png') + ')'}"></div> -->
         <!-- <img class="pets pet_pic one" src="{{ animals[index].img }}" /> -->
 
-         <!-- v-bind:style="{ 'background-image': 'url(' + require( animal.img ) + ')'}" -->
+        <!-- v-bind:style="{ 'background-image': 'url(' + require( animal.img ) + ')'}" -->
         <!-- <div class="pets pet_name one">{{ animals[index].name }}</div> -->
         <div class="pets button_contour">Learn more</div>
     </div>
 </template>
+
+ { link: require('/public/2.png') }
+         { link: require('assets/images/sophia.png') },
 
 <script>
 // import useData from "../data/pets.json"
