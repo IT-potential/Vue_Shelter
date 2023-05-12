@@ -1,16 +1,16 @@
 <template>
     <div class="body fixed_popup" v-show="open">
 
-        <div class="popup" v-for="animal in animals" :key='animal.id'>
+        <div class="popup">
             <div class="popup_wrapper">
                 <span class="popup_pic"></span>
                 <div class="popup_info_wrapper">
-                    <p class="popup_name">{{ animal.name }}</p>
+                    <p class="popup_name">{{ animalInfo.name }}</p>
                     <div class="popup_type_species_wrapper">
-                        <div class="popup_pet_type">{{ animal.type }}</div>
-                        <div class="popup_pet_species">{{ animal.breed }}</div>
+                        <div class="popup_pet_type">{{ animalInfo.type }}</div>
+                        <div class="popup_pet_species">{{ animalInfo.breed }}</div>
                     </div>
-                    <p class="popup_text">{{ animal.description }}</p>
+                    <p class="popup_text">{{ animalInfo.description }}</p>
                     <ul class="popup_list">
 
                         <li class="popup_list_item"> Age</li>
@@ -32,21 +32,18 @@
 </template>
 
 <script>
-import useData from "../../data/pets.json"
 
 export default {
     props: {
+        animalInfo: {
+            type: Object,
+            required: true,
+        },
         open: {
             type: Boolean,
-            required: true
-        }
+            required: true,
+        },
     },
-    data() {
-        return { animals: useData }
-    },
-    methods: {
-       
-    }
 }
 
 
