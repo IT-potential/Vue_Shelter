@@ -1,5 +1,5 @@
 <template>
-   <footer class="footer" id="footer">
+   <footer class="footer" id="contacts">
       <div class="footer_wrapper">
         <div class="footer block one">
           <h2 class="footer_title">For questions and suggestions</h2>

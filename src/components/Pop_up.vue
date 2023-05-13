@@ -3,8 +3,13 @@
 
         <div class="popup">
             <div class="popup_wrapper">
-                <span class="popup_pic"></span>
+                <span class="popup_pic" v-bind:style="{ backgroundImage: `url(${animalInfo.img})` }"></span>
                 <div class="popup_info_wrapper">
+                    <pre>
+                    <!-- {{
+                        JSON.stringify(animalInfo, null, 2)
+                    }} -->
+                    </pre>
                     <p class="popup_name">{{ animalInfo.name }}</p>
                     <div class="popup_type_species_wrapper">
                         <div class="popup_pet_type">{{ animalInfo.type }}</div>
@@ -38,12 +43,19 @@ export default {
         animalInfo: {
             type: Object,
             required: true,
+
         },
         open: {
             type: Boolean,
             required: true,
         },
     },
+    methods: {
+        closePopup() {
+            this.$emit('close')
+        }
+    }
+
 }
 
 

@@ -12,17 +12,17 @@
           </li>
           <ul class="nav_menu items">
             <li class="nav_menu item active">
-              <a class="nav_menu link" href="#header">About the shelter</a>
+              <a class="nav_menu link" href="../App.vue">About the shelter</a>
             </li>
             <li class="nav_menu item">
-              <a class="nav_menu link" href="#pets">Our pets</a>
+              <a class="nav_menu link" href="../../pages/pets/PetsApp.vue">Our pets</a>
             </li>
 
             <li class="nav_menu item">
               <a class="nav_menu link" href="../main/index.html#help">Help the shelter</a>
             </li>
             <li class="nav_menu item">
-              <a class="nav_menu link" href="#footer">Contacts</a>
+              <a class="nav_menu link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -58,7 +58,7 @@ export default {
       { name: 'About the shelter', link: '#header' },
       { name: 'Our pets', link: '#pets' },
       { name: 'Help the shelter', link: '#help' },
-      { name: 'Contacts', link: '#footer' },
+      { name: 'Contacts', link: '#contacts' },
     ]
     return {
       links,
