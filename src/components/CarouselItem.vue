@@ -5,12 +5,14 @@
         </div>
         <div class="pets carousel_cards_wrapper">
             <div class="pets carousel_cards" :interval="2000"
-                :style="{ 'margin-left': '-' + (109 * currentSlideIndex) + '%' }">
-                <pets id="#pets" class="pets carousel_cards card one" v-for="(animal, index) in  animals " :key="index"
+                :style="{ 'margin-left': '-' + (100 * currentSlideIndex) + '%' }">
+                <pets id="#pets" class="pets carousel_cards card one" v-for="(animal, index) in animals" :key="index"
                     :animal="animal">
-                    <div class="pets pet_pic one" v-bind:style="{ backgroundImage: `url(${animal.img})` }"></div>
+                    <div class="pets pet_pic one" v-bind:style="{ backgroundImage: `url(${animal.img})` }">
+                    </div>
                     <div class="pets pet_name one">{{ animal.name }}</div>
-                    <button class="pets button_contour" @click="openPopup(animal)">Learn more</button>
+                    <button class="pets button_contour" @click="openPopup(animal)">Learn more
+                    </button>
                     <Popup :open="isOpen" @close="closePopup" :animalInfo="selectedAnimal" />
                 </pets>
             </div>
@@ -24,7 +26,6 @@
 <script>
 import useData from '../../data/pets.json'
 import Popup from '@/components/Pop_up.vue'
-// import { ref } from "vue"
 
 export default {
     components: {
@@ -37,7 +38,7 @@ export default {
             currentSlideIndex: 0,
             isInfoPopupVisible: false,
             isOpen: false,
-            selectedAnimal: {},
+            selectedAnimal: Object,
         }
     },
     methods: {
@@ -52,31 +53,28 @@ export default {
         },
         leftSlide() {
             if (this.currentSlideIndex < 0) {
-                this.currentSlideIndex = this.animals.length - 6
+                this.currentSlideIndex = this.animals.length - 4
             } else {
                 this.currentSlideIndex--
             }
         },
         rightSlide() {
             console.log(this.animals.length);
-            if (this.currentSlideIndex >= this.animals.length - 6) {
+            if (this.currentSlideIndex >= this.animals.length - 4) {
                 this.currentSlideIndex = 0
             } else {
                 this.currentSlideIndex++
             }
         },
         mounted() {
-            if (this.interval > 0) {
-                setInterval(() =>
-                    this.rightSlide()
-                ), 2000
-            }
+            fetch('../../data/data.json' + this.id)
+                .then((response) => response.json())
+                .then(data => this.animals = data)
+                .catch(err => console.log(err.message))
         }
+         
     }
-    // setup() {
-    //     const isOpen = ref(false)
-    //     return { isOpen }
-    // }
+
 }
 </script>
 

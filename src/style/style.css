@@ -215,18 +215,18 @@
   color: var(--text-color-dark-two);
 }
 .pets {
-  width: 100%;
-  background-color: var(--section-color-three);
+  /* width: 100%;
+  background-color: var(--section-color-three); */
 }
 .pets_wrapper {
-  width: 1200px;
+  /* width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 .pets.title {
-  width: 400px;
+  /* width: 400px;
   font-family: "Georgia";
   font-size: 35px;
   line-height: 130%;
@@ -234,20 +234,21 @@
   color: var(--text-color-dark-one);
   margin-top: 80px;
   margin-bottom: 60px;
-  letter-spacing: 2px;
+  letter-spacing: 2px; */
 }
 .pets.carousel {
   width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
 }
 .pets.carousel_cards_wrapper {
   width: 990px;
   overflow: hidden;
 }
 .pets.button {
-  width: 52px;
+  /* width: 52px;
   height: 52px;
   display: flex;
   justify-content: center;
@@ -255,7 +256,7 @@
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   transition: all 0.4s ease-in-out;
-  transform: translate(0px, -30px);
+  transform: translate(0px, -30px); */
 }
 .pets.button:hover {
   cursor: pointer;
@@ -280,22 +281,22 @@
   background-image: url("../../refs/icons/Arrow_slider_right.svg");
 }
 .pets.carousel_cards {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between;
   width: 990px;
-  transition: all 0.4s ease-in-out;
-  -moz-column-gap: 90px;
-       column-gap: 90px;
+  transition: all 0.4s ease-in-out; */
+  /* -moz-column-gap: 90px;
+       column-gap: 90px; */
 }
 .pets.carousel_cards.card {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 9px 9px 9px 9px;
   width: 270px;
   background-color: var(--card-color);
   transition: all 0.4s ease-in-out;
-  margin-bottom: 60px;
+  margin-bottom: 60px; */
 }
 .pets.carousel_cards.card:hover {
   cursor: pointer;
@@ -333,7 +334,7 @@
   background-color: transparent;
 }
 .pets.button_contour {
-  width: 187px;
+  /* width: 187px;
   padding: 15px 0px;
   font-family: "Georgia";
   font-size: 17px;
@@ -342,8 +343,8 @@
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   transition: all 0.4s ease-in-out;
-  text-align: center;
-  margin-bottom: 30px;
+  text-align: center; */
+  
 }
 .pets:hover > .button_contour {
   border: 2px solid var(--button-color-hover);
@@ -899,9 +900,7 @@
   .about_info {
     margin-top: 80px;
   }
-  .pets_wrapper {
-    width: 708px;
-  }
+
   .pets.carousel {
     width: 708px;
   }
@@ -1194,9 +1193,6 @@
     text-align: justify;
     padding: 0px 15px 0px 15px;
   }
-  .pets_wrapper {
-    width: 300px;
-  }
   .pets.title {
     width: 300px;
     font-size: 25px;
@@ -1211,7 +1207,7 @@
     align-items: center;
   }
   .pets.button {
-    position: absolute;
+    /* position: absolute; */
   }
   .pets.button.left {
     transform: translate(30px, 230px);

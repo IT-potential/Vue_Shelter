@@ -5,15 +5,14 @@
         Our friends who<br />
         are looking for a house
       </h2>
-       
-            <CarouselItem />
-         
+          <CarouselItem />
           <Popup 
             :is-open="isPopupOpen"
             @close="isPopupOpen = false"  
           />
         
-      <a class="button_filled carousel" href="../pets/index.html">Get to know the rest</a>
+      <a class="button_filled carousel" href="./PetsApp">
+        Get to know the rest</a>
     </div>
   </section>
 </template>

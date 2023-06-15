@@ -27,7 +27,7 @@
 } 
 .burger_nav_menu_link {
   text-decoration: none;
-  color: #cdcdcd;
+  color: hsl(0, 33%, 99%);
 }
 .burger_nav_menu_link.active {
   color: #fafafa;
