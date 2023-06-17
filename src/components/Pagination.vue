@@ -29,7 +29,7 @@ export default {
     methods: {
         changePage(p) {
             this.currentPage = p
-            this.$emit('page-changed', pageNumber)
+            this.$emit('page-changed', p)
         }
     }
 }

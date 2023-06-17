@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <section class="pets" id="pets" v-if="!loading">
+    <section class="pets" id="pets">
       <h2 class="pets title">
         Our friends who<br>
         are looking for a house
@@ -22,13 +22,10 @@
           <button class="pets button disabled_two" id="disabled_two">
             <span class="pets arrow left"></span>
           </button>
-         
+
           <button class="pets button number" v-for="pageNumber in pageCount" :key="pageNumber"
-            @click="() => changePage(pageNumber)" 
-            @mouseover="console.log('iii')"
-            :class="{ 'current-page': page === pageNumber }"
-            style="z-index: 1"
-            >
+            @click="changePage(pageNumber)" 
+            :class="{ 'current-page': page === pageNumber }">
             <span class="pets page_number">
               {{ pageNumber }}
             </span>
@@ -52,60 +49,42 @@
 
 <script>
 import '@/style/pets_app.css'
-// import Pagination from './Pagination.vue'
 
 export default {
   name: "all-pets",
-  components: {
-    //  Pagination
-  },
   data() {
     return {
       items: [],
       page: 1,
-      total: 0,
       pageSize: 6,
-      loading: true,
     }
   },
   created() {
-    this.getAnimalsData(this.page)
+    this.getAnimalsData()
   },
   computed: {
+    total() {
+      return this.items.length
+    },
     pageCount() {
-      return Math.ceil((this.items.length) / this.pageSize)
+      return Math.ceil(this.total / this.pageSize)
     },
     paginatedItems() {
-      let startIndex = (this.currentPage - 1) * this.pageSize;
+      let startIndex = (this.page - 1) * this.pageSize;
       let endIndex = startIndex + this.pageSize;
       return this.items.slice(startIndex, endIndex)
     }
   },
   methods: {
-    async getAnimalsData(pageNumber) {
-      this.items = await fetch(`http://localhost:3000/pets?page=${pageNumber}`)
+    async getAnimalsData() {
+      this.items = await fetch(`http://localhost:3000/pets`)
         .then(response => response.json())
-        .then(response => {
-          this.items = response
-          this.total = response.count
-          console.log(this.items, response);
-          this.loading = false;
-          return response.results
-        })
     },
     changePage(pageNumber) {
       this.page = pageNumber;
-      this.getAnimalsData(this.page)
-      console.log(this.page);
     }
   },
   mounted() {
-    this.getAnimalsData(this.pageNumber);
-
-    //  fetch('http://localhost:3000/pest')
-    //   .then((response) => response.json())
-    //   .then(data => this.items = data)
-    //   .catch(err => console.log(err.message))
   }
 }
 </script>

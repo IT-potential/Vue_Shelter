@@ -6,31 +6,32 @@
           <h1 class="logo_one">Cozy House</h1>
           <h2 class="logo_two">Shelter for pets in Boston</h2>
         </a>
-        <router-view>
-          <nav class="nav_menu" v-if="!show">
-            <li class="nav_menu item">
-              <a class="nav_menu link"></a>
+
+        <nav class="nav_menu" v-if="!show">
+          <li class="nav_menu item">
+            <a class="nav_menu link"></a>
+          </li>
+          <ul class="nav_menu items">
+            <li class="nav_menu item active">
+              <a class="nav_menu link" href="../App.vue">About the shelter</a>
             </li>
-            <ul class="nav_menu items">
-              <li class="nav_menu item active">
-                <a class="nav_menu link" href="../App.vue">About the shelter</a>
-              </li>
-              <li class="nav_menu item">
-                <!-- <a class="nav_menu link" v-if="!displaySection" href="#pets"@click="displaySection = !displaySection">Our pets</a> -->
-                <a class="nav_menu link" href="./PetsApp.vue">
-                  Our pets</a>
-              </li>
-              <li class="nav_menu item">
-                <a class="nav_menu link" href="#help">Help the shelter</a>
-              </li>
+            <li class="nav_menu item">
+              <!-- <a class="nav_menu link" v-if="!displaySection" href="#pets"@click="displaySection = !displaySection">Our pets</a> -->
+              <a class="nav_menu link" href="./PetsApp.vue">
+                Our pets</a>
+            </li>
+            <li class="nav_menu item">
+              <a class="nav_menu link" href="#contacts">Help the shelter</a>
+            </li>
+
+            <li class="nav_menu item">
               <router-link class="nav_menu link" to="/footer">Footer
-                <li class="nav_menu item">
-                  <!-- <a class="nav_menu link" href="#contacts">Contacts</a> -->
-                </li>
+                <!-- <a class="nav_menu link" href="#contacts">Contacts</a> -->
               </router-link>
-            </ul>
-          </nav>
-        </router-view>
+            </li>
+          </ul>
+        </nav>
+
       </div>
       <div class="burger" @click="show = !show">
         <span class="burger_line"></span>

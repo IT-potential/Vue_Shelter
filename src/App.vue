@@ -1,5 +1,5 @@
 <template>
-  <router-view></router-view>
+
     <Navbar_menu></Navbar_menu>
     <Header_info></Header_info>
     <!-- <Friends_house v-if="!displaySection"></Friends_house> -->
