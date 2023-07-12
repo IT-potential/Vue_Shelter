@@ -71,6 +71,7 @@
 .nav_menu {
   display: flex;
   align-items: center;
+  visibility: visible;
 }
 .nav_menu.item {
   padding-top: 25px;
@@ -159,8 +160,8 @@
   letter-spacing: 1.5px;
   background-color: var(--button-color);
   border-radius: 100px;
-  transition: all 0.4s ease-in-out;
   margin-bottom: 100px;
+  border: none;
 }
 .button_filled:hover {
   cursor: pointer;
@@ -214,19 +215,19 @@
   line-height: 160%;
   color: var(--text-color-dark-two);
 }
-.pets {
-  /* width: 100%;
-  background-color: var(--section-color-three); */
-}
+/* .pets {
+  width: 100%;
+  background-color: var(--section-color-three);
+} */
 .pets_wrapper {
-  /* width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center; */
+  align-items: center;
 }
 .pets.title {
-  /* width: 400px;
+  width: 400px;
   font-family: "Georgia";
   font-size: 35px;
   line-height: 130%;
@@ -234,7 +235,7 @@
   color: var(--text-color-dark-one);
   margin-top: 80px;
   margin-bottom: 60px;
-  letter-spacing: 2px; */
+  letter-spacing: 2px;
 }
 .pets.carousel {
   width: 1200px;
@@ -248,7 +249,7 @@
   overflow: hidden;
 }
 .pets.button {
-  /* width: 52px;
+  width: 52px;
   height: 52px;
   display: flex;
   justify-content: center;
@@ -256,7 +257,7 @@
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   transition: all 0.4s ease-in-out;
-  transform: translate(0px, -30px); */
+  transform: translate(0px, -30px);
 }
 .pets.button:hover {
   cursor: pointer;
@@ -281,22 +282,21 @@
   background-image: url("../../refs/icons/Arrow_slider_right.svg");
 }
 .pets.carousel_cards {
-  /* display: flex; */
-  /* justify-content: space-between;
-  width: 990px;
-  transition: all 0.4s ease-in-out; */
-  /* -moz-column-gap: 90px;
-       column-gap: 90px; */
+  display: flex; justify-content: space-between;
+  /* width: 990px; */
+  transition: all 0.4s ease-in-out;
+  -moz-column-gap: 90px;
+  column-gap: 90px;
 }
 .pets.carousel_cards.card {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 9px 9px 9px 9px;
-  width: 270px;
+  /* width: 270px; */
   background-color: var(--card-color);
   transition: all 0.4s ease-in-out;
-  margin-bottom: 60px; */
+  margin-bottom: 60px;
 }
 .pets.carousel_cards.card:hover {
   cursor: pointer;
@@ -312,17 +312,6 @@
 }
 .pets.pet_pic.one {
   border-radius: 9px 9px 0px 0px;
-
-  background-repeat: no-repeat;
-}
-.pets.pet_pic.two {
-  border-radius: 9px 9px 0px 0px;
-  background-image: url("../../refs/pics/dogs/pets-jennifer.png");
-  background-repeat: no-repeat;
-}
-.pets.pet_pic.three {
-  border-radius: 9px 9px 0px 0px;
-  background-image: url("../../refs/pics/dogs/pets-woody.png");
   background-repeat: no-repeat;
 }
 .pets.pet_name {
@@ -334,7 +323,7 @@
   background-color: transparent;
 }
 .pets.button_contour {
-  /* width: 187px;
+  width: 187px;
   padding: 15px 0px;
   font-family: "Georgia";
   font-size: 17px;
@@ -343,8 +332,7 @@
   border: 2px solid #f1cdb3;
   border-radius: 100px;
   transition: all 0.4s ease-in-out;
-  text-align: center; */
-  
+  text-align: center;
 }
 .pets:hover > .button_contour {
   border: 2px solid var(--button-color-hover);
@@ -452,7 +440,7 @@
 }
 .help.item.five:hover > .pic.five {
   animation-name: shampoo_anim;
-  animation-duration: 0.4s;
+  animation-duration: 0.pets carousel4s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
@@ -860,9 +848,9 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  /* .burger {
-    display: none;
-  } */
+  .burger {
+    display: flex;
+  }
   .startscreen {
     height: 1165px;
   }
@@ -902,7 +890,7 @@
   }
 
   .pets.carousel {
-    width: 708px;
+    /* width: 708px; */
   }
   .pets.carousel_cards {
     width: 580px;
@@ -1120,7 +1108,8 @@
     justify-content: space-between;
   }
   .nav_menu {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
   }
   .startscreen {
     height: 823px;
@@ -1205,6 +1194,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: .4s ease-out;
+    transition-delay: 0.5s
   }
   .pets.button {
     /* position: absolute; */
@@ -1257,6 +1248,7 @@
   }
   .button_filled.carousel {
     transform: translate(0px, 50px);
+    /* transition: margin-left 4s ease-in-out 1s; */
   }
   .help_wrapper {
     width: 300px;

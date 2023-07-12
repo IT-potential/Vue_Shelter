@@ -11,7 +11,7 @@
           extremely wide and open heart. He or she will love you more than
           anybody else in the world, you will see!
         </p>
-        <a href="#pets" class="button_filled">Make a friend</a>
+        <a href="/#pets" class="button_filled">Make a friend</a>
       </div>
       <div class="startscreen_pic"></div>
     </div>

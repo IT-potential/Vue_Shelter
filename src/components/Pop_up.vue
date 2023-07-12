@@ -1,9 +1,9 @@
 <template>
     <div class="body fixed_popup" v-show="open">
-
         <div class="popup">
             <div class="popup_wrapper">
-                <span class="popup_pic" v-bind:style="{ backgroundImage: `url(${animalInfo.img})` }"></span>
+                <span class="popup_pic" 
+                v-bind:style="{ backgroundImage: `url(${animalInfo.modal})` }"></span>
                 <div class="popup_info_wrapper">
                     <pre>
                     <!-- {{
@@ -23,11 +23,10 @@
                         <li class="popup_list_item"> Diseases</li>
                         <li class="popup_list_item"> Parasites</li>
                     </ul>
-                    <button class="pets button_contour" @click="$emit('close')"></button>
                 </div>
 
             </div>
-            <div class="popup_cross_circle">
+            <div class="popup_cross_circle" @click="$emit('close')">
                 <span class="popup_cross"></span>
             </div>
         </div>

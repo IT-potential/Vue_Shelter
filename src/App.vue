@@ -1,10 +1,14 @@
 <template>
-
+  
     <Navbar_menu></Navbar_menu>
+   
     <Header_info></Header_info>
-    <!-- <Friends_house v-if="!displaySection"></Friends_house> -->
-    <PetsApp></PetsApp>
+    
+    <Friends_house v-if="!displaySection"></Friends_house>
     <Footer_contacts></Footer_contacts>
+ 
+    <!-- <PetsApp></PetsApp> -->
+     
 </template>
 
 <script>
@@ -12,8 +16,8 @@ import '@/style/style.css'
 import Navbar_menu from './components/Navbar_menu.vue'
 import Footer_contacts from './components/Footer_contacts.vue'
 import Header_info from './components/Header_info.vue'
-import PetsApp from './components/PetsApp.vue'
-// import Friends_house from './components/Friends_house.vue'
+// import PetsApp from './components/PetsApp.vue'
+import Friends_house from './components/Friends_house.vue'
 
 export default {
   name: 'App',
@@ -21,8 +25,8 @@ export default {
     Navbar_menu,
     Footer_contacts,
     Header_info,
-    // Friends_house,
-    PetsApp
+    Friends_house,
+    // PetsApp
   },
   data() {
     return { 

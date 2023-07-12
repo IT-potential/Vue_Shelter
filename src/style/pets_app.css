@@ -1,5 +1,7 @@
 .pets {
   background-color: var(--section-color-three);
+  transition: .4s ease-out;
+  transition-delay: 0.5s
 }
 
 .pets_wrapper {
@@ -11,9 +13,9 @@
   align-content: center;
   width: 1400px;
   margin: 0 auto;
-
+  transition: .4s ease-out;
+  transition-delay: 0.5s
 }
-
 .pets.title {
   width: 1400px;
   margin: 0 auto;
@@ -30,7 +32,6 @@
 
 .pets.slider {
   margin: 20px;
-
 }
 
 .pets.slider_cards {
@@ -60,7 +61,7 @@
   width: 1600px;
   /* margin: 42px; */
   gap: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   margin-top: 30px;
 }
 
@@ -155,7 +156,14 @@
   background-repeat: no-repeat;
   background-color: transparent;
 }
-
+.pets.page_number {
+  delay: 700;
+  transition: width 2s, height 2s, background-color 2s, rotate 2s;
+}
+.pets.page_number:hover {
+  transform: rotate(180deg);
+  rotate: 180deg;
+}
 /* .pets.slider_cards.card.four {
     display: none;
   }
