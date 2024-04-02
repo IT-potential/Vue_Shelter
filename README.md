@@ -1,15 +1,17 @@
 Shelter figma maket https://www.figma.com/file/Yk6EnbY63FyG2PJTFkJDMh/shelter
-Ключевые навыки:
-*  валидная семантическая адаптивная вёрстка
-*  легкоподдерживаемый читаемый код
-*  экспорт стилей и графики из Figma
-*  использование VUE framework для реализации указанного в задании функционала
-Создана адаптианая верстка при ширине 768px и 320px страницы соответствуют макету
-Добавлен функционал:
-* бургер-меню на обеих страницах
-* попап для карточек животных на обеих страницах
-* бесконечный слайдер-карусель на странице main
-* пагинация на странице pets
+
+Key skills developed:
+* Valid semantic adaptive layout
+* Easy to maintain readable code
+* Export styles and graphics from Figma
+* Use of VUE framework to implement the functionality specified in the task
+* An adaptive layout was created with a width of 768px and 320px pages correspond to the layout
+
+Added functionality:
+* Burger menu on both pages
+* Popup for animal cards on both pages
+* Endless carousel slider on the main page
+* Pagination on the pets page
 
 ## Project setup
 ```
